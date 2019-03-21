@@ -49,8 +49,8 @@ function upgradeBaseButton() {
 		partsLevel = partsLevel + 1
 		cash = cash - costOfUpgrade;
 	}
-	var nextCost = Math.floor(5 * Math.pow(2, partsLevel));
-	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextCost;
+	nextUpgradeCost = Math.floor(5 * Math.pow(2, partsLevel));
+	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextUpgradeCost;
 	document.getElementById("numberOfUpgrade").innerHTML = "Sword Upgrades: " + partsLevel;
 }
 
@@ -316,76 +316,7 @@ function saveGame() {
 		cash: cash,
 		mana: mana,
 		partsLevel: partsLevel,
-		costOfUpgrade: costOfUpgrade,
-
-		partsPerSecond: partsPerSecond,
-		cashPerSecond: cashPerSecond,
-		manaPerSecond: manaPerSecond,
-
-		auto1: auto1,
-		auto1Cost: auto1Cost,
-		nextCostAuto1: nextCostAuto1,
-		numberOfAutomatic1: numberOfAutomatic1,
-
-		auto2: auto2,
-		auto2Cost: auto2Cost,
-		nextCostAuto2: nextCostAuto2,
-		numberOfAutomatic2: numberOfAutomatic2,
-
-		auto3: auto3,
-		auto3Cost: auto3Cost,
-		nextCostAuto3: nextCostAuto3,
-		numberOfAutomatic3: numberOfAutomatic3,
-
-		auto4: auto4,
-		auto4Cost: auto4Cost,
-		nextCostAuto4: nextCostAuto4,
-		numberOfAutomatic4: numberOfAutomatic4,
-
-		auto5: auto5,
-		auto5Cost: auto5Cost,
-		nextCostAuto5: nextCostAuto5,
-		numberOfAutomatic5: numberOfAutomatic5,
-
-		auto6: auto6,
-		auto6Cost: auto6Cost,
-		nextCostAuto6: nextCostAuto6,
-		numberOfAutomatic6: numberOfAutomatic6,
-
-		auto7: auto7,
-		auto7Cost: auto7Cost,
-		nextCostAuto7: nextCostAuto7,
-		numberOfAutomatic7: numberOfAutomatic7,
-
-		sellAuto1: sellAuto1,
-		sellAuto1Cost: sellAuto1Cost,
-		nextCostSellAuto1: nextCostSellAuto1,
-		numberOfSellAutomatic1: numberOfSellAutomatic1,
-
-		sellAuto2: sellAuto2,
-		sellAuto2Cost: sellAuto2Cost,
-		nextCostSellAuto2: nextCostSellAuto2,
-		numberOfSellAutomatic2: numberOfSellAutomatic2,
-
-		sellAuto3: sellAuto3,
-		sellAuto3Cost: sellAuto3Cost,
-		nextCostSellAuto3: nextCostSellAuto3,
-		numberOfSellAutomatic3: numberOfSellAutomatic3,
-
-		sellAuto4: sellAuto4,
-		sellAuto4Cost: sellAuto4Cost,
-		nextCostSellAuto4: nextCostSellAuto4,
-		numberOfSellAutomatic4: numberOfSellAutomatic4,
-
-		sellAuto5: sellAuto5,
-		sellAuto5Cost: sellAuto5Cost,
-		nextCostSellAuto5: nextCostSellAuto5,
-		numberOfSellAutomatic5: numberOfSellAutomatic5,
-
-		manaAuto1: manaAuto1,
-		manaAuto1Cost: manaAuto1Cost,
-		nextManaAuto1Cost: nextManaAuto1Cost,
-		numberOfManaProducer1: numberOfManaProducer1
+		nextUpgradeCost: nextUpgradeCost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -409,66 +340,6 @@ function loadGame() {
 	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
 	if (typeof savegame.nextCostAuto1 !== "undefined") nextCostAuto1 = savegame.nextCostAuto1;
 	if (typeof savegame.numberOfAutomatic1 !== "undefined") numberOfAutomatic1 = savegame.numberOfAutomatic1;
-
-	if (typeof savegame.auto2 !== "undefined") auto2 = savegame.auto2;
-	if (typeof savegame.auto2Cost !== "undefined") auto2Cost = savegame.auto2Cost;
-	if (typeof savegame.nextCostAuto2 !== "undefined") nextCostAuto2 = savegame.nextCostAuto2;
-	if (typeof savegame.numberOfAutomatic2 !== "undefined") numberOfAutomatic2 = savegame.numberOfAutomatic2;
-
-	if (typeof savegame.auto3 !== "undefined") auto3 = savegame.auto3;
-	if (typeof savegame.auto3Cost !== "undefined") auto3Cost = savegame.auto3Cost;
-	if (typeof savegame.nextCostAuto3 !== "undefined") nextCostAuto3 = savegame.nextCostAuto3;
-	if (typeof savegame.numberOfAutomatic3 !== "undefined") numberOfAutomatic3 = savegame.numberOfAutomatic3;
-
-	if (typeof savegame.auto4 !== "undefined") auto4 = savegame.auto4;
-	if (typeof savegame.auto4Cost !== "undefined") auto4Cost = savegame.auto4Cost;
-	if (typeof savegame.nextCostAuto4 !== "undefined") nextCostAuto4 = savegame.nextCostAuto4;
-	if (typeof savegame.numberOfAutomatic4 !== "undefined") numberOfAutomatic4 = savegame.numberOfAutomatic4;
-
-	if (typeof savegame.auto5 !== "undefined") auto5 = savegame.auto5;
-	if (typeof savegame.auto5Cost !== "undefined") auto5Cost = savegame.auto5Cost;
-	if (typeof savegame.nextCostAuto5 !== "undefined") nextCostAuto5 = savegame.nextCostAuto5;
-	if (typeof savegame.numberOfAutomatic5 !== "undefined") numberOfAutomatic5 = savegame.numberOfAutomatic5;
-
-	if (typeof savegame.auto6 !== "undefined") auto6 = savegame.auto6;
-	if (typeof savegame.auto6Cost !== "undefined") auto6Cost = savegame.auto6Cost;
-	if (typeof savegame.nextCostAuto6 !== "undefined") nextCostAuto6 = savegame.nextCostAuto6;
-	if (typeof savegame.numberOfAutomatic6 !== "undefined") numberOfAutomatic6 = savegame.numberOfAutomatic6;
-
-	if (typeof savegame.auto7 !== "undefined") auto7 = savegame.auto7;
-	if (typeof savegame.auto7Cost !== "undefined") auto7Cost = savegame.auto7Cost;
-	if (typeof savegame.nextCostAuto7 !== "undefined") nextCostAuto7 = savegame.nextCostAuto7;
-	if (typeof savegame.numberOfAutomatic7 !== "undefined") numberOfAutomatic7 = savegame.numberOfAutomatic7;
-
-	if (typeof savegame.sellAuto1 !== "undefined") sellAuto1 = savegame.sellAuto1;
-	if (typeof savegame.sellAuto1Cost !== "undefined") sellAuto1Cost = savegame.sellAuto1Cost;
-	if (typeof savegame.nextCostSellAuto1 !== "undefined") nextCostSellAuto1 = savegame.nextCostSellAuto1;
-	if (typeof savegame.numberOfSellAutomatic1 !== "undefined") numberOfSellAutomatic1 = savegame.numberOfSellAutomatic1;
-
-	if (typeof savegame.sellAuto2 !== "undefined") sellAuto2 = savegame.sellAuto2;
-	if (typeof savegame.sellAuto2Cost !== "undefined") sellAuto2Cost = savegame.sellAuto2Cost;
-	if (typeof savegame.nextCostSellAuto2 !== "undefined") nextCostSellAuto2 = savegame.nextCostSellAuto2;
-	if (typeof savegame.numberOfSellAutomatic2 !== "undefined") numberOfSellAutomatic2 = savegame.numberOfSellAutomatic2;
-
-	if (typeof savegame.sellAuto3 !== "undefined") sellAuto3 = savegame.sellAuto3;
-	if (typeof savegame.sellAuto3Cost !== "undefined") sellAuto3Cost = savegame.sellAuto3Cost;
-	if (typeof savegame.nextCostSellAuto3 !== "undefined") nextCostSellAuto3 = savegame.nextCostSellAuto3;
-	if (typeof savegame.numberOfSellAutomatic3 !== "undefined") numberOfSellAutomatic3 = savegame.numberOfSellAutomatic3;
-
-	if (typeof savegame.sellAuto4 !== "undefined") sellAuto4 = savegame.sellAuto4;
-	if (typeof savegame.sellAuto4Cost !== "undefined") sellAuto4Cost = savegame.sellAuto4Cost;
-	if (typeof savegame.nextCostSellAuto4 !== "undefined") nextCostSellAuto4 = savegame.nextCostSellAuto4;
-	if (typeof savegame.numberOfSellAutomatic4 !== "undefined") numberOfSellAutomatic4 = savegame.numberOfSellAutomatic4;
-
-	if (typeof savegame.sellAuto5 !== "undefined") sellAuto5 = savegame.sellAuto5;
-	if (typeof savegame.sellAuto5Cost !== "undefined") sellAuto5Cost = savegame.sellAuto5Cost;
-	if (typeof savegame.nextCostSellAuto5 !== "undefined") nextCostSellAuto5 = savegame.nextCostSellAuto5;
-	if (typeof savegame.numberOfSellAutomatic5 !== "undefined") numberOfSellAutomatic5 = savegame.numberOfSellAutomatic5;
-
-	if (typeof savegame.manaAuto1 !== "undefined") manaAuto1 = savegame.manaAuto1;
-	if (typeof savegame.manaAuto1Cost !== "undefined") manaAuto1Cost = savegame.manaAuto1Cost;
-	if (typeof savegame.nextManaAuto1Cost !== "undefined") nextManaAuto1Cost = savegame.nextManaAuto1Cost;
-	if (typeof savegame.numberOfManaProducer1 !== "undefined") numberOfManaProducer1 = savegame.numberOfManaProducer1;
 }
 
 window.setInterval(function(){

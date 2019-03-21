@@ -49,8 +49,8 @@ function upgradeBaseButton() {
 		partsLevel = partsLevel + 1
 		cash = cash - costOfUpgrade;
 	}
-	var nextCostUpgrade = Math.floor(5 * Math.pow(2, partsLevel));
-	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextCostUpgrade;
+	var nextCost = Math.floor(5 * Math.pow(2, partsLevel));
+	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextCost;
 	document.getElementById("numberOfUpgrade").innerHTML = "Sword Upgrades: " + partsLevel;
 }
 
@@ -342,7 +342,6 @@ function loadGame() {
 	if (typeof savegame.partsPerSecond !== "undefined") partsPerSecond = savegame.partsPerSecond;
 	if (typeof savegame.cashPerSecond !== "undefined") cashPerSecond = savegame.cashPerSecond;
 	if (typeof savegame.manaPerSecond !== "undefined") manaPerSecond = savegame.manaPerSecond;
-	if (typeof savegame.nextCost !== "undefined") nextCost = savegame.nextCost;
 
 	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
 	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;

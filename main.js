@@ -9,12 +9,19 @@ var cashPerSecond = 0;
 var manaPerSecond = 0;
 
 var auto1 = 0;
+var auto1Cost = Math.floor(10 * Math.pow(1.4, auto1));
 var auto2 = 0;
+var auto2Cost = Math.floor(50 * Math.pow(1.3, auto2));
 var auto3 = 0;
+var auto3Cost = Math.floor(100 * Math.pow(1.2, auto3));
 var auto4 = 0;
+var auto4Cost = Math.floor(150 * Math.pow(1.1, auto4));
 var auto5 = 0;
+var auto5Cost = Math.floor(200 * Math.pow(1.1, auto5));
 var auto6 = 0;
+var auto6Cost = Math.floor(200 * Math.pow(1.1, auto6));
 var auto7 = 0;
+var auto7Cost = Math.floor(100 * Math.pow(1.3, auto7));
 
 var sellAuto1 = 0;
 var sellAuto2 = 0;
@@ -66,7 +73,6 @@ function sellPart(number) {
 /* Auto Producers*/
 
 function buyCommoner() {
-	auto1Cost = Math.floor(10 * Math.pow(1.4, auto1));
 	if(cash >= auto1Cost) {
 		auto1 = auto1 + 1;
 		cash = cash - auto1Cost;
@@ -78,7 +84,6 @@ function buyCommoner() {
 }
 
 function buySwordsman() {
-	auto2Cost = Math.floor(50 * Math.pow(1.3, auto2));
 	if(cash >= auto2Cost) {
 		auto2 = auto2 + 1;
 		cash = cash - auto2Cost;
@@ -90,7 +95,6 @@ function buySwordsman() {
 }
 
 function buyKnight() {
-	auto3Cost = Math.floor(100 * Math.pow(1.2, auto3));
 	if(cash >= auto3Cost) {
 		auto3 = auto3 + 1;
 		cash = cash - auto3Cost;
@@ -102,7 +106,6 @@ function buyKnight() {
 }
 
 function buyGeneral() {
-	auto4Cost = Math.floor(150 * Math.pow(1.1, auto4));
 	if(cash >= auto4Cost) {
 		auto4 = auto4 + 1;
 		cash = cash - auto4Cost;
@@ -114,7 +117,6 @@ function buyGeneral() {
 }
 
 function buyCommander() {
-	auto5Cost = Math.floor(200 * Math.pow(1.1, auto5));
 	if(cash >= auto5Cost) {
 		auto5 = auto5 + 1;
 		cash = cash - auto5Cost;
@@ -126,7 +128,6 @@ function buyCommander() {
 }
 
 function buyDarkKnight() {
-	auto6Cost = Math.floor(200 * Math.pow(1.1, auto6));
 	if(cash >= auto6Cost) {
 		auto6 = auto6 + 1;
 		cash = cash - auto6Cost;
@@ -138,7 +139,6 @@ function buyDarkKnight() {
 }
 
 function buyTitanSlayer() {
-	auto7Cost = Math.floor(100 * Math.pow(1.3, auto7));
 	if(mana >= auto7Cost) {
 		auto7 = auto7 + 1;
 		mana = mana - auto7Cost;

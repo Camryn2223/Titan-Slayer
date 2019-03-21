@@ -344,7 +344,8 @@ function saveGame() {
 		sellAuto4Cost: sellAuto4Cost,
 		sellAuto5: sellAuto5,
 		sellAuto5Cost: sellAuto5Cost,
-		manaAuto1: manaAuto1
+		manaAuto1: manaAuto1,
+		manaAuto1Cost: manaAuto1Cost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -362,19 +363,36 @@ function loadGame() {
 	if (typeof savegame.partsPerSecond !== "undefined") partsPerSecond = savegame.partsPerSecond;
 	if (typeof savegame.cashPerSecond !== "undefined") cashPerSecond = savegame.cashPerSecond;
 	if (typeof savegame.manaPerSecond !== "undefined") manaPerSecond = savegame.manaPerSecond;
+	
+	if (typeof savegame.nextCost !== "undefined") nextCost = savegame.nextCost;
 	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
+	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
 	if (typeof savegame.auto2 !== "undefined") auto2 = savegame.auto2;
+	if (typeof savegame.auto2Cost !== "undefined") auto2Cost = savegame.auto2Cost;
 	if (typeof savegame.auto3 !== "undefined") auto3 = savegame.auto3;
+	if (typeof savegame.auto3Cost !== "undefined") auto3Cost = savegame.auto3Cost;
 	if (typeof savegame.auto4 !== "undefined") auto4 = savegame.auto4;
+	if (typeof savegame.auto4Cost !== "undefined") auto4Cost = savegame.auto4Cost;
 	if (typeof savegame.auto5 !== "undefined") auto5 = savegame.auto5;
+	if (typeof savegame.auto5Cost !== "undefined") auto5Cost = savegame.auto5Cost;
 	if (typeof savegame.auto6 !== "undefined") auto6 = savegame.auto6;
+	if (typeof savegame.auto6Cost !== "undefined") auto6Cost = savegame.auto6Cost;
 	if (typeof savegame.auto7 !== "undefined") auto7 = savegame.auto7;
+	if (typeof savegame.auto7Cost !== "undefined") auto7Cost = savegame.auto7Cost;
+
 	if (typeof savegame.sellAuto1 !== "undefined") sellAuto1 = savegame.sellAuto1;
+	if (typeof savegame.sellAuto1Cost !== "undefined") sellAuto1Cost = savegame.sellAuto1Cost;
 	if (typeof savegame.sellAuto2 !== "undefined") sellAuto2 = savegame.sellAuto2;
+	if (typeof savegame.sellAuto2Cost !== "undefined") sellAuto2Cost = savegame.sellAuto2Cost;
 	if (typeof savegame.sellAuto3 !== "undefined") sellAuto3 = savegame.sellAuto3;
+	if (typeof savegame.sellAuto3Cost !== "undefined") sellAuto3Cost = savegame.sellAuto3Cost;
 	if (typeof savegame.sellAuto4 !== "undefined") sellAuto4 = savegame.sellAuto4;
+	if (typeof savegame.sellAuto4Cost !== "undefined") sellAuto4Cost = savegame.sellAuto4Cost;
 	if (typeof savegame.sellAuto5 !== "undefined") sellAuto5 = savegame.sellAuto5;
+	if (typeof savegame.sellAuto5Cost !== "undefined") sellAuto5Cost = savegame.sellAuto5Cost;
+
 	if (typeof savegame.manaAuto1 !== "undefined") manaAuto1 = savegame.manaAuto1;
+	if (typeof savegame.manaAuto1Cost !== "undefined") manaAuto1Cost = savegame.manaAuto1Cost;
 
 
 }

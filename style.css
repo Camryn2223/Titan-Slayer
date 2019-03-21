@@ -23,6 +23,12 @@ h1.slayer {
 	margin-bottom: 5px;
 }
 
+p.version {
+	float: right;
+	margin-top: 105px;
+	color: #ffffff;
+}
+
 /*Main Buttons*/
 
 .saveGame {

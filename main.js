@@ -317,7 +317,7 @@ function saveGame() {
 		mana: mana,
 		partsLevel: partsLevel,
 	}
-	localStorage.setItem("save",JSON.stringify(save));
+	localStorage.setItem("save",JSON.stringify(saveGame));
 }
 
 function saveDelete() {

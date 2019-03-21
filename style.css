@@ -439,6 +439,10 @@ button:hover .generateText7 {
 	display: none;
 }
 
+div.autoSellers {
+	margin-top: 50px;
+}
+
 /* Auto Seller 1 */
 
 .sellButton1 {

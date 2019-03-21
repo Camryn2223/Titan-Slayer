@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" />
+	<script src="main.js"></script>
+	<title>Titan Slayer</title>
+</head>
+<body onload="load()">
+	<button class="saveGame" id="saveGame" onclick="saveGame()">Save Game</button>
+	<div class="producers">
+		<button class="clickerButton" id="clickerButton" onclick="gainPart(1)">
+			<span class="attackTitan">Attack Titan</span>
+			<span class="partsPerSecond" id="partsPerSecond">0 p/s</span>
+		</button>
+		<p id="parts">Parts: 0</p>
+
+		<button class="sellButton" id="sellButton" onclick="sellPart(1)">
+			<span class="sellParts">Sell Parts</span>
+			<span class="cashPerSecond" id="cashPerSecond">$ 0 /s</span>
+		</button>
+		<p id="cash">Cash: $ 0</p>
+
+		<button class="manaButton" id="manaButton" onclick="generateMana(1)">
+			<span class="generateMana">Generate Mana</span>
+			<span class="manaPerSecond" id="manaPerSecond">0 m/s</span>
+		</button>
+		<p id="mana">Mana: 0</p>
+<br>
+		<button class="upgradeBaseButton" id="upgradeBaseButton" onclick="upgradeBaseButton(1)">
+			<span class="upgradeSword">Upgrade Sword</span>
+			<span class="numberOfUpgrade" id="numberOfUpgrade">Sword Upgrades: 0</span>	
+		</button>
+		<p id="costOfUpgrade">Cost: $5</p>
+<br>
+<br>
+<br>
+<br>
+	</div>
+<br>
+	<div class="autoProducers">
+		<button class="shopButton1" id="shopButton1" onclick="buyCommoner()">
+			<span class="buyCommoner">Buy Commoner</span>
+			<span class="numberOfAutomatic1" id="numberOfAutomatic1">Commoners: 0</span>
+			<span class="generateText1">Generates: 1p/s</span>
+		</button>
+<br>
+		<p id="auto1Cost">Cost: $ 10</p>
+<br>
+		<button class="shopButton2" id="shopButton2" onclick="buySwordsman()">
+			<span class="buySwordsman">Buy Swordsman</span>
+			<span class="numberOfAutomatic2" id="numberOfAutomatic2">Swordsman: 0</span>
+			<span class="generateText2">Generates: 3p/s</span>
+		</button>
+<br>
+		<p id="auto2Cost">Cost: $ 50</p>
+<br>
+		<button class="shopButton3" id="shopButton3" onclick="buyKnight()">
+			<span class="buyKnight">Buy Knight</span>
+			<span class="numberOfAutomatic3" id="numberOfAutomatic3">Knights: 0</span>
+			<span class="generateText3">Generates: 5p/s</span>
+		</button>
+<br>
+		<p id="auto3Cost">Cost: $ 100</p>
+<br>
+		<button class="shopButton4" id="shopButton4" onclick="buyGeneral()">
+			<span class="buyGeneral">Buy General</span>
+			<span class="numberOfAutomatic4" id="numberOfAutomatic4">Generals: 0</span>
+			<span class="generateText4">Generates: 7p/s</span>
+		</button>
+<br>
+		<p id="auto4Cost">Cost: $ 150</p>
+<br>
+		<button class="shopButton5" id="shopButton5" onclick="buyCommander()">
+			<span class="buyCommander">Buy Commander</span>
+			<span class="numberOfAutomatic5" id="numberOfAutomatic5">Commanders: 0</span>
+			<span class="generateText5">Generates: 9p/s</span>
+		</button>
+<br>
+		<p id="auto5Cost">Cost: $ 200</p>
+<br>
+		<button class="shopButton6" id="shopButton6" onclick="buyDarkKnight()">
+			<span class="buyDarkKnight">Buy Dark Knight</span>
+			<span class="numberOfAutomatic6" id="numberOfAutomatic6">Dark Knights: 0</span>
+			<span class="generateText6">Generates: 11p/s</span>
+		</button>
+<br>
+		<p id="auto6Cost">Cost: $ 250</p>
+<br>
+		<button class="shopButton7" id="shopButton7" onclick="buyTitanSlayer()">
+			<span class="buyTitanSlayer">Buy Titan Slayer</span>
+			<span class="numberOfAutomatic7" id="numberOfAutomatic7">Titan Slayers: 0</span>
+			<span class="generateText7">Generates: 15p/s</span>
+		</button>
+<br>
+		<p id="auto7Cost">Cost: 100 Mana</p>
+<br>
+	</div>
+<br>
+	<div class="autoSellers">
+		<button class="sellButton1" id="sellButton1" onclick="buyBlacksmith()">
+			<span class="buyBlacksmith">Buy Blacksmith</span>
+			<span class="numberOfSellAutomatic1" id="numberOfSellAutomatic1">Blacksmiths: 0</span>
+			<span class="sellGenerateText1">Generates: $1/s</span>
+		</button>
+<br>
+		<p id="sellAuto1Cost">Cost: 250 Parts</p>
+<br>
+		<button class="sellButton2" id="sellButton2" onclick="buyAlchemist()">
+			<span class="buyAlchemist">Buy Alchemist</span>
+			<span class="numberOfSellAutomatic2" id="numberOfSellAutomatic2">Alchemists: 0</span>
+			<span class="sellGenerateText2">Generates: $5/s</span>
+		</button>
+<br>
+		<p id="sellAuto2Cost">Cost: 500 Parts</p>
+<br>
+		<button class="sellButton3" id="sellButton3" onclick="buyThief()">
+			<span class="buyThief">Buy Thief</span>
+			<span class="numberOfSellAutomatic3" id="numberOfSellAutomatic3">Thieves: 0</span>
+			<span class="sellGenerateText3">Generates: $10/s</span>
+		</button>
+<br>
+		<p id="sellAuto3Cost">Cost: 1000 Parts</p>
+<br>
+		<button class="sellButton4" id="sellButton4" onclick="buyWizard()">
+			<span class="buyEnchanter">Buy Wizard</span>
+			<span class="numberOfSellAutomatic4" id="numberOfSellAutomatic4">Wizards: 0</span>
+			<span class="sellGenerateText4">Generates: $15/s</span>
+		</button>
+<br>
+		<p id="sellAuto4Cost">Cost: 2000 Parts</p>
+<br>
+		<button class="sellButton5" id="sellButton5" onclick="buySummoner()">
+			<span class="buySummoner">Buy Summoner</span>
+			<span class="numberOfSellAutomatic5" id="numberOfSellAutomatic5">Summoners: 0</span>
+			<span class="sellGenerateText5">Generates: $20/s</span>
+		</button>
+<br>
+		<p id="sellAuto5Cost">Cost: 2500 Parts</p>
+<br>
+	</div>
+<br>
+	<div class="manaProducers">
+		<button class="manaProducer1" id="manaProducer1" onclick="buyTransmutator()">
+			<span class="buyTransmutator">Buy Transmutator</span>
+			<span class="numberOfManaProducer1" id="numberOfManaProducer1">Transmutators: 0</span>
+			<span class="manaProducerText">Generates: 1m/s</span>
+		</button>
+<br>
+		<p id="manaProducer1Cost">Cost: 2000 Parts</p>
+<br>
+	</div>
+
+</body>
+</html>

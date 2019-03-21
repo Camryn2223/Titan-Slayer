@@ -1,0 +1,671 @@
+body {
+	background-color: #2d2d2d;
+	font: normal 16px Roboto;
+	line-height: 1.6em;
+	margin: 5;
+}
+
+*:focus {
+outline: 0;
+outline: none;
+}
+
+/*Main Buttons*/
+
+.saveGame {
+	float: right;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	background-color: #5D6063;
+}
+.saveGame:hover {
+	background-color: #525557;
+}
+
+.clickerButton {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	background-color: #DC143C;
+}
+.clickerButton:hover {
+	background-color: #8B0000;
+}
+button .partsPerSecond {
+	display: none;
+}
+button:hover .attackTitan {
+	display: none;
+}
+button:hover .partsPerSecond {
+	display: inline;
+	font-weight: bolder;
+}
+
+.sellButton {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 50px;
+	position: relative;
+	background-color: #008000;
+}
+.sellButton:hover {
+	background-color: #006400;
+}
+button .cashPerSecond {
+	display: none;
+}
+button:hover .sellParts {
+	display: none;
+}
+button:hover .cashPerSecond {
+	display: inline;
+	font-weight: bolder;
+}
+
+.manaButton {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 50px;
+	position: relative;
+	background-color: #00FFFF;
+	visibility: hidden;
+}
+.manaButton:hover {
+	background-color: #008080;
+}
+button .manaPerSecond {
+	display: none;
+}
+button:hover .generateMana {
+	display: none;
+}
+button:hover .manaPerSecond {
+	display: inline;
+	font-weight: bolder;
+}
+
+/* Resources */
+
+#parts {
+	float: left;
+	color: #DC143C;
+	margin-left: -150px;
+	margin-top: 35px;
+	font-weight: bold;
+	position: relative;
+	display: inline;
+}
+#cash {
+	float: left;
+	color: #008000;
+	margin-left: -150px;
+	margin-top: 35px;
+	font-weight: bold;
+	position: relative;	
+	display: inline;
+}
+#mana {
+	float: left;
+	color: #00FFFF;
+	margin-left: -150px;
+	margin-top: 35px;
+	font-weight: bold;
+	position: relative;
+	display: inline;
+	visibility: hidden;
+}
+
+/* Sword Upgrade */
+
+.upgradeBaseButton {
+	float: left;
+	border: none;
+	width: 100px;
+	height: 35px;
+	margin-left: -550px;
+	margin-top: 50px;
+	display: inline;
+	visibility: hidden;
+	background-color: #ffffff;
+}
+.upgradeBaseButton:hover {
+	background-color: #828282;
+}
+button .numberOfUpgrade {
+	display: none;
+}
+button:hover .upgradeSword {
+	display: none;
+}
+button:hover .numberOfUpgrade {
+	display: inline;
+}
+#costOfUpgrade {
+	float: left;
+	color: #ffffff;
+	margin-left: -445px;
+	margin-top: 55px;
+	display: inline;
+	position: relative;
+	visibility: hidden;
+}
+
+/* Shop Button 1 */
+
+.shopButton1 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	background-color: #DC143C;
+}
+.shopButton1:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic1 {
+	display: none;
+}
+button .generateText1 {
+	display: none;
+}
+button:hover .buyCommoner {
+	display: none;
+}
+button:hover .numberOfAutomatic1 {
+	display: inline;
+}
+button:hover .generateText1 {
+	display: inline;
+}
+#auto1Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+}
+
+/* Shop Button 2 */
+
+.shopButton2 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	display: none;
+	background-color: #DC143C;
+}
+.shopButton2:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic2 {
+	display: none;
+}
+button .generateText2 {
+	display: none;
+}
+button:hover .buySwordsman {
+	display: none;
+}
+button:hover .numberOfAutomatic2 {
+	display: inline;
+}
+button:hover .generateText2 {
+	display: inline;
+}
+#auto2Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+	display: none;
+}
+
+/* Shop Button 3 */
+
+.shopButton3 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	display: none;
+	background-color: #DC143C;
+}
+.shopButton3:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic3 {
+	display: none;
+}
+button .generateText3 {
+	display: none;
+}
+button:hover .buyKnight {
+	display: none;
+}
+button:hover .numberOfAutomatic3 {
+	display: inline;
+}
+button:hover .generateText3 {
+	display: inline;
+	margin-left: 10px;
+}
+#auto3Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+	display: none;
+}
+
+/* Shop Button 4 */
+
+.shopButton4 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	display: none;
+	background-color: #DC143C;
+}
+.shopButton4:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic4 {
+	display: none;
+}
+button .generateText4 {
+	display: none;
+}
+button:hover .buyGeneral {
+	display: none;
+}
+button:hover .numberOfAutomatic4 {
+	display: inline;
+}
+button:hover .generateText4 {
+	display: inline;
+}
+#auto4Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+	display: none;
+}
+
+/* Shop Button 5 */
+
+.shopButton5 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	display: none;
+	background-color: #DC143C;
+}
+.shopButton5:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic5 {
+	display: none;
+}
+button .generateText5 {
+	display: none;
+}
+button:hover .buyCommander {
+	display: none;
+}
+button:hover .numberOfAutomatic5 {
+	display: inline;
+}
+button:hover .generateText5 {
+	display: inline;
+}
+#auto5Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+	display: none;
+}
+
+/* Shop Button 6 */
+
+.shopButton6 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	display: none;
+	background-color: #DC143C;
+}
+.shopButton6:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic6 {
+	display: none;
+}
+button .generateText6 {
+	display: none;
+}
+button:hover .buyDarkKnight {
+	display: none;
+}
+button:hover .numberOfAutomatic6 {
+	display: inline;
+}
+button:hover .generateText6 {
+	display: inline;
+}
+#auto6Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+	display: none;
+}
+
+/* Shop Button 7 */
+
+.shopButton7 {
+	float: left;
+	border: solid;
+	border-width: 2px;
+	color: #00FFFF;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	display: none;
+	background-color: #DC143C;
+}
+.shopButton7:hover {
+	background-color: #8B0000;
+}
+button .numberOfAutomatic7 {
+	display: none;
+}
+button .generateText7 {
+	display: none;
+}
+button:hover .buyTitanSlayer {
+	display: none;
+}
+button:hover .numberOfAutomatic7 {
+	display: inline;
+}
+button:hover .generateText7 {
+	display: inline;
+}
+#auto7Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 5px;
+	margin-top: -22px;
+	position: relative;
+	display: none;
+}
+
+/* Auto Seller 1 */
+
+.sellButton1 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 300px;
+	margin-top: -325px;
+	position: relative;
+	display: none;
+	background-color: #008000;
+}
+.sellButton1:hover {
+	background-color: #006400;
+}
+button .numberOfSellAutomatic1 {
+	display: none;
+}
+button .sellGenerateText1 {
+	display: none;
+}
+button:hover .buyBlacksmith {
+	display: none;
+}
+button:hover .numberOfSellAutomatic1 {
+	display: inline;
+}
+button:hover .sellGenerateText1 {
+	display: inline;
+}
+#sellAuto1Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 455px;
+	margin-top: -345px;
+	position: relative;
+	display: none;
+}
+
+/* Auto Seller 2 */
+
+.sellButton2 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 300px;
+	margin-top: -325px;
+	position: relative;
+	display: none;
+	background-color: #008000;
+}
+.sellButton2:hover {
+	background-color: #006400;
+}
+button .numberOfSellAutomatic2 {
+	display: none;
+}
+button .sellGenerateText2 {
+	display: none;
+}
+button:hover .buyAlchemist {
+	display: none;
+}
+button:hover .numberOfSellAutomatic2 {
+	display: inline;
+}
+button:hover .sellGenerateText2 {
+	display: inline;
+}
+#sellAuto2Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 455px;
+	margin-top: -345px;
+	position: relative;
+	display: none;
+}
+
+/* Auto Seller 3 */
+
+.sellButton3 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 300px;
+	margin-top: -325px;
+	position: relative;
+	display: none;
+	background-color: #008000;
+}
+.sellButton3:hover {
+	background-color: #006400;
+}
+button .numberOfSellAutomatic3 {
+	display: none;
+}
+button .sellGenerateText3 {
+	display: none;
+}
+button:hover .buyThief {
+	display: none;
+}
+button:hover .numberOfSellAutomatic3 {
+	display: inline;
+}
+button:hover .sellGenerateText3 {
+	display: inline;
+	margin-left: 10px;
+}
+#sellAuto3Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 455px;
+	margin-top: -345px;
+	position: relative;
+	display: none;
+}
+
+/* Auto Seller 4 */
+
+.sellButton4 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 300px;
+	margin-top: -325px;
+	position: relative;
+	display: none;
+	background-color: #00FFFF;
+}
+.sellButton4:hover {
+	background-color: #008B8B;
+}
+button .numberOfSellAutomatic4 {
+	display: none;
+	margin-left: 6px;
+}
+button .sellGenerateText4 {
+	display: none;
+}
+button:hover .buyEnchanter {
+	display: none;
+}
+button:hover .numberOfSellAutomatic4 {
+	display: inline;
+}
+button:hover .sellGenerateText4 {
+	display: inline;
+}
+#sellAuto4Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 455px;
+	margin-top: -345px;
+	position: relative;
+	display: none;
+}
+
+/* Auto Seller 5 */
+
+.sellButton5 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 300px;
+	margin-top: -325px;
+	position: relative;
+	display: none;
+	background-color: #008000;
+}
+.sellButton5:hover {
+	background-color: #006400;
+}
+button .numberOfSellAutomatic5 {
+	display: none;
+}
+button .sellGenerateText5 {
+	display: none;
+}
+button:hover .buySummoner {
+	display: none;
+}
+button:hover .numberOfSellAutomatic5 {
+	display: inline;
+}
+button:hover .sellGenerateText5 {
+	display: inline;
+}
+#sellAuto5Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 455px;
+	margin-top: -345px;
+	position: relative;
+	display: none;
+}
+
+/* Mana Producer 1 */
+
+.manaProducer1 {
+	float: left;
+	border: none;
+	width: 150px;
+	height: 35px;
+	margin-left: 600px;
+	margin-top: -600px;
+	position: relative;
+	display: inline;
+	visibility: hidden;
+	background-color: #00FFFF;
+}
+.manaProducer1:hover {
+	background-color: #008B8B;
+}
+button .numberOfManaProducer1 {
+	display: none;
+}
+button .manaProducerText {
+	display: none;
+}
+button:hover .buyTransmutator {
+	display: none;
+}
+button:hover .numberOfManaProducer1 {
+	display: inline;
+}
+button:hover .manaProducerText {
+	display: inline;
+}
+#manaProducer1Cost {
+	float: left;
+	color: #ffffff;
+	margin-left: 755px;
+	margin-top: -620px;
+	position: relative;
+	display: inline;
+	visibility: hidden;
+}

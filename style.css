@@ -10,11 +10,6 @@ outline: 0;
 outline: none;
 }
 
-h1 {
-	margin: 5px;
-	color: #ffffff;
-}
-
 /*Main Buttons*/
 
 .saveGame {
@@ -35,7 +30,7 @@ h1 {
 	border: none;
 	width: 150px;
 	height: 35px;
-	margin-right: 150px;
+	margin-right: 50px;
 	margin-top: -25px;
 	position: relative;
 	background-color: #5D6063;

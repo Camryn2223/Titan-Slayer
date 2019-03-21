@@ -111,6 +111,14 @@ button:hover .manaPerSecond {
 	font-weight: bolder;
 }
 
+div.autoSellers {
+	margin-top: -50px;
+}
+
+div.autoProducers {
+	margin-top: 50px;
+}
+
 /* Resources */
 
 #parts {
@@ -442,10 +450,6 @@ button:hover .generateText7 {
 	margin-top: -22px;
 	position: relative;
 	display: none;
-}
-
-div.autoSellers {
-	margin-top: 0px;
 }
 
 /* Auto Seller 1 */

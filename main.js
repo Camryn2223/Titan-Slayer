@@ -331,15 +331,6 @@ function loadGame() {
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
 	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
-
-	if (typeof savegame.partsPerSecond !== "undefined") partsPerSecond = savegame.partsPerSecond;
-	if (typeof savegame.cashPerSecond !== "undefined") cashPerSecond = savegame.cashPerSecond;
-	if (typeof savegame.manaPerSecond !== "undefined") manaPerSecond = savegame.manaPerSecond;
-
-	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
-	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
-	if (typeof savegame.nextCostAuto1 !== "undefined") nextCostAuto1 = savegame.nextCostAuto1;
-	if (typeof savegame.numberOfAutomatic1 !== "undefined") numberOfAutomatic1 = savegame.numberOfAutomatic1;
 }
 
 window.setInterval(function(){

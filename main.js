@@ -320,7 +320,6 @@ function saveGame() {
 		cashPerSecond: cashPerSecond,
 		manaPerSecond: manaPerSecond,
 		nextCostUpgrade: nextCostUpgrade,
-
 		auto1: auto1,
 		auto1Cost: auto1Cost,
 		nextCostAuto1: nextCostAuto1,
@@ -351,7 +350,6 @@ function saveGame() {
 		manaAuto1Cost: manaAuto1Cost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
-	document.getElementById("gameSaved").style.visibility = "visible";
 	document.getElementById("gameSaved").innerHTML = "Game Saved!";
 }
 

@@ -324,6 +324,10 @@ function saveGame() {
 	localStorage.setItem("save",JSON.stringify(save));
 }
 
+function saveDelete() {
+	localStorage.removeItem("save");
+}
+
 function loadGame() {
 	var savegame = JSON.parse(localStorage.getItem("save"));
 	if (typeof savegame.parts !== "undefined") parts = savegame.parts;

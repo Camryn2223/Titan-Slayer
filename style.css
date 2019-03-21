@@ -24,6 +24,18 @@ outline: none;
 	background-color: #525557;
 }
 
+.saveDelete {
+	float: right;
+	border: none;
+	width: 150px;
+	height: 35px;
+	position: relative;
+	background-color: #5D6063;
+}
+.saveDelete:hover {
+	background-color: #525557;
+}
+
 .clickerButton {
 	float: left;
 	border: none;

@@ -21,6 +21,7 @@ h1 {
 	border: none;
 	width: 150px;
 	height: 35px;
+	margin-top: -50px;
 	position: relative;
 	background-color: #5D6063;
 }
@@ -34,6 +35,7 @@ h1 {
 	width: 150px;
 	height: 35px;
 	margin-right: 50px;
+	margin-top: -50px;
 	position: relative;
 	background-color: #5D6063;
 }
@@ -179,7 +181,7 @@ button:hover .numberOfUpgrade {
 /* Shop Button 1 */
 
 div.producers {
-	margin-top: 50px;
+	margin-top: 200px;
 }
 
 .shopButton1 {

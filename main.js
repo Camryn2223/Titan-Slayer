@@ -316,7 +316,7 @@ function saveGame() {
 		cash: savedCash,
 		mana: savedMana,
 	}
-	localStorage.setItem("save",JSON.stringify(saveGame));
+	localStorage.setItem("save",JSON.stringify(save));
 }
 
 function saveDelete() {

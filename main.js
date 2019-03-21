@@ -36,6 +36,7 @@ function gainPart(number) {
 
 function generateMana(number) {
 	mana = mana + number;
+	document.getElementById("mana").innerHTML = "Mana: " + mana;
 }
 
 function gainParts(number) {

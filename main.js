@@ -316,6 +316,7 @@ function saveGame() {
 		cash: cash,
 		mana: mana,
 		partsLevel: partsLevel,
+		nextUpgradeCost: nextUpgradeCost
 	}
 	localStorage.setItem("save",JSON.stringify(saveGame));
 }
@@ -330,6 +331,7 @@ function loadGame() {
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
 	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
+	if (typeof savegame.nextUpgradeCost !== "undefined") nextUpgradeCost = savegame.nextUpgradeCost;
 }
 
 window.setInterval(function(){

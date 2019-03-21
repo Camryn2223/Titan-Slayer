@@ -408,9 +408,7 @@ window.setInterval(function(){
 	gainParts(partsPerSecond);
 	generateMana(manaPerSecond);
 
-	nextCost;
-
-	partsPerSecond = (auto1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
+	partsPerSecond = (auto1 * 1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
 	document.getElementById("numberOfAutomatic2").innerHTML = "Swordsmen: " + auto2;
 	document.getElementById("numberOfAutomatic3").innerHTML = "Knights: " + auto3;
@@ -419,7 +417,7 @@ window.setInterval(function(){
 	document.getElementById("numberOfAutomatic6").innerHTML = "Dark Knights: " + auto6;
 	document.getElementById("numberOfAutomatic7").innerHTML = "Titan Slayers: " + auto7;
 
-	cashPerSecond = (sellAuto1) + (sellAuto2 * 5) + (sellAuto3 * 10) + (sellAuto4 * 15) + (sellAuto5 * 20);
+	cashPerSecond = (sellAuto1 * 1) + (sellAuto2 * 5) + (sellAuto3 * 10) + (sellAuto4 * 15) + (sellAuto5 * 20);
 	document.getElementById("numberOfSellAutomatic1").innerHTML = "Blacksmiths: " + sellAuto1;
 	document.getElementById("numberOfSellAutomatic2").innerHTML = "Alchemists: " + sellAuto2;
 	document.getElementById("numberOfSellAutomatic3").innerHTML = "Thieves: " + sellAuto3;

@@ -1,8 +1,8 @@
 var partsLevel = 0;
 
-var parts = 0;
-var cash = 0;
-var mana = 0;
+var parts = 15000;
+var cash = 15000;
+var mana = 15000;
 
 var partsPerSecond = 0;
 var cashPerSecond = 0;

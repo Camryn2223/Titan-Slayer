@@ -24,9 +24,9 @@ h1.slayer {
 }
 
 p.version {
-	float: right;
 	margin-top: 105px;
 	color: #ffffff;
+	position: fixed;
 }
 
 /*Main Buttons*/
@@ -131,10 +131,15 @@ button:hover .manaPerSecond {
 
 div.autoSellers {
 	margin-top: -50px;
+	margin-left: 25px;
 }
 
 div.autoProducers {
-	margin-top: -10px;
+	margin-top: 85px;
+}
+
+div.manaProducers {
+	margin-left: 100px;
 }
 
 /* Resources */
@@ -477,7 +482,7 @@ button:hover .generateText7 {
 	border: none;
 	width: 150px;
 	height: 35px;
-	margin-left: 32px;
+	margin-left: 57px;
 	margin-top: -325px;
 	position: relative;
 	display: none;

@@ -397,7 +397,7 @@ function loadGame() {
 	if (typeof savegame.manaAuto1 !== "undefined") manaAuto1 = savegame.manaAuto1;
 	if (typeof savegame.manaAuto1Cost !== "undefined") manaAuto1Cost = savegame.manaAuto1Cost;
 
-
+	document.getElementById("saveGame").innerHTML = "Save Loaded!";
 }
 
 window.setInterval(function(){

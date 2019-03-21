@@ -340,7 +340,6 @@ window.setInterval(function(){
 	sellPart(cashPerSecond);
 	gainParts(partsPerSecond);
 	generateMana(manaPerSecond);
-	saveGame();
 
 	partsPerSecond = (auto1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;

@@ -2,12 +2,25 @@ body {
 	background-color: #2d2d2d;
 	font: normal 16px Roboto;
 	line-height: 1.6em;
-	margin: 5;
+	margin: 15px;
+	margin-top: 25px;
 }
 
 *:focus {
 outline: 0;
 outline: none;
+}
+
+h1.titan {
+	color: #ffffff;
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+h1.slayer {
+	color: #DC143C;
+	margin-top: -35px;
+	margin-left: 80px;
+	margin-bottom: 5px;
 }
 
 /*Main Buttons*/
@@ -17,8 +30,10 @@ outline: none;
 	border: none;
 	width: 150px;
 	height: 35px;
+	margin-top: -35px;
 	position: relative;
 	background-color: #5D6063;
+	font-weight: bold;
 }
 .saveGame:hover {
 	background-color: #525557;
@@ -29,9 +44,11 @@ outline: none;
 	border: none;
 	width: 150px;
 	height: 35px;
-	margin-right: 50px;
+	margin-right: 200px;
+	margin-top: -35px;
 	position: relative;
 	background-color: #5D6063;
+	font-weight: bold;
 }
 .saveDelete:hover {
 	background-color: #525557;
@@ -111,7 +128,7 @@ div.autoSellers {
 }
 
 div.autoProducers {
-	margin-top: 50px;
+	margin-top: -10px;
 }
 
 /* Resources */
@@ -454,7 +471,7 @@ button:hover .generateText7 {
 	border: none;
 	width: 150px;
 	height: 35px;
-	margin-left: 250px;
+	margin-left: 32px;
 	margin-top: -325px;
 	position: relative;
 	display: none;

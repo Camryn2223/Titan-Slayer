@@ -316,7 +316,6 @@ function saveGame() {
 		cash: cash,
 		mana: mana,
 		partsLevel: partsLevel,
-		costOfUpgrade: costOfUpgrade
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -331,7 +330,6 @@ function loadGame() {
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
 	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
-	if (typeof savegame.costOfUpgrade !== "undefined") costOfUpgrade = savegame.costOfUpgrade;
 }
 
 window.setInterval(function(){
@@ -339,7 +337,6 @@ window.setInterval(function(){
 	gainParts(partsPerSecond);
 	generateMana(manaPerSecond);
 
-	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextUpgradeCost;
 
 	partsPerSecond = (auto1 * 1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;

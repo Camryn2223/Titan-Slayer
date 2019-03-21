@@ -348,7 +348,6 @@ function loadGame() {
 	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
 	if (typeof savegame.nextCostAuto1 !== "undefined") nextCostAuto1 = savegame.nextCostAuto1;
 	if (typeof savegame.numberOfAutomatic1 !== "undefined") numberOfAutomatic1 = savegame.numberOfAutomatic1;
-	document.getElementById("saveGame").innerHTML = "Save Loaded!";
 }
 
 window.setInterval(function(){

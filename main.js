@@ -49,8 +49,8 @@ function upgradeBaseButton() {
 		partsLevel = partsLevel + 1
 		cash = cash - costOfUpgrade;
 	}
-	var nextCost = Math.floor(5 * Math.pow(2, partsLevel));
-	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextCost;
+	var nextCostUpgrade = Math.floor(5 * Math.pow(2, partsLevel));
+	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextCostUpgrade;
 	document.getElementById("numberOfUpgrade").innerHTML = "Sword Upgrades: " + partsLevel;
 }
 
@@ -319,7 +319,8 @@ function saveGame() {
 		partsPerSecond: partsPerSecond,
 		cashPerSecond: cashPerSecond,
 		manaPerSecond: manaPerSecond,
-		nextCost: nextCost,
+		nextCostUpgrade: nextCostUpgrade,
+
 		auto1: auto1,
 		auto1Cost: auto1Cost,
 		auto2: auto2,
@@ -363,7 +364,7 @@ function loadGame() {
 	if (typeof savegame.partsPerSecond !== "undefined") partsPerSecond = savegame.partsPerSecond;
 	if (typeof savegame.cashPerSecond !== "undefined") cashPerSecond = savegame.cashPerSecond;
 	if (typeof savegame.manaPerSecond !== "undefined") manaPerSecond = savegame.manaPerSecond;
-	
+
 	if (typeof savegame.nextCost !== "undefined") nextCost = savegame.nextCost;
 	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
 	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
@@ -401,6 +402,8 @@ window.setInterval(function(){
 	sellPart(cashPerSecond);
 	gainParts(partsPerSecond);
 	generateMana(manaPerSecond);
+
+	nextCost;
 
 	partsPerSecond = (auto1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;

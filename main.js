@@ -1,15 +1,3 @@
-var saveGame = {
-	parts: parts,
-	cash: cash,
-	mana: mana,
-	partsLevel: partsLevel,
-	partsPerSecond: partsPerSecond,
-	cashPerSecond: cashPerSecond,
-	manaPerSecond: manaPerSecond,
-	auto1: auto1,
-	auto2: auto2
-}
-
 var partsLevel = 0;
 
 var parts = 0;
@@ -322,15 +310,26 @@ function cps() {
 }
 
 function saveGame() {
-	localStorage.setItem("saveGame",JSON.stringify(saveGame));
-	console.log("Saved!");
+	var save = {
+	parts: parts,
+	cash: cash,
+	mana: mana,
+	partsLevel: partsLevel,
+	partsPerSecond: partsPerSecond,
+	cashPerSecond: cashPerSecond,
+	manaPerSecond: manaPerSecond,
+	auto1: auto1,
+	auto2: auto2
+}
+	localStorage.setItem("save",JSON.stringify(save));
 }
 
-function load() {
-	var savegame = JSON.parse(localStorage.getItem("saveGame"));
+function loadGame() {
+	var savegame = JSON.parse(localStorage.getItem("save"));
 	if (typeof savegame.parts !== "undefined") parts = savegame.parts;
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
+	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
 }
 
 window.setInterval(function(){

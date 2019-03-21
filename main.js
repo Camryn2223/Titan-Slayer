@@ -339,7 +339,6 @@ window.setInterval(function(){
 	gainParts(partsPerSecond);
 	generateMana(manaPerSecond);
 
-	document.getElementById("numberOfUpgrade").innerHTML = "Sword Upgrades: " + partsLevel;
 	document.getElementById("costOfUpgrade").innerHTML = "Cost: $" + nextUpgradeCost;
 
 	partsPerSecond = (auto1 * 1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);

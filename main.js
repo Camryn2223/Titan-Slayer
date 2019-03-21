@@ -311,16 +311,16 @@ function cps() {
 
 function saveGame() {
 	var save = {
-	parts: parts,
-	cash: cash,
-	mana: mana,
-	partsLevel: partsLevel,
-	partsPerSecond: partsPerSecond,
-	cashPerSecond: cashPerSecond,
-	manaPerSecond: manaPerSecond,
-	auto1: auto1,
-	auto2: auto2
-}
+		parts: parts,
+		cash: cash,
+		mana: mana,
+		partsLevel: partsLevel,
+		partsPerSecond: partsPerSecond,
+		cashPerSecond: cashPerSecond,
+		manaPerSecond: manaPerSecond,
+		auto1: auto1,
+		auto2: auto2
+	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
 

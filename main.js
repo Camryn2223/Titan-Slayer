@@ -319,7 +319,18 @@ function saveGame() {
 		cashPerSecond: cashPerSecond,
 		manaPerSecond: manaPerSecond,
 		auto1: auto1,
-		auto2: auto2
+		auto2: auto2,
+		auto3: auto3,
+		auto4: auto4,
+		auto5: auto5,
+		auto6: auto6,
+		auto7: auto7,
+		sellAuto1: sellAuto1,
+		sellAuto2: sellAuto2,
+		sellAuto3: sellAuto3,
+		sellAuto4: sellAuto4,
+		sellAuto5: sellAuto5,
+		manaAuto1: manaAuto1
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -333,7 +344,25 @@ function loadGame() {
 	if (typeof savegame.parts !== "undefined") parts = savegame.parts;
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
+	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
+	if (typeof savegame.partsPerSecond !== "undefined") partsPerSecond = savegame.partsPerSecond;
+	if (typeof savegame.cashPerSecond !== "undefined") cashPerSecond = savegame.cashPerSecond;
+	if (typeof savegame.manaPerSecond !== "undefined") manaPerSecond = savegame.manaPerSecond;
 	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
+	if (typeof savegame.auto2 !== "undefined") auto2 = savegame.auto2;
+	if (typeof savegame.auto3 !== "undefined") auto3 = savegame.auto3;
+	if (typeof savegame.auto4 !== "undefined") auto4 = savegame.auto4;
+	if (typeof savegame.auto5 !== "undefined") auto5 = savegame.auto5;
+	if (typeof savegame.auto6 !== "undefined") auto6 = savegame.auto6;
+	if (typeof savegame.auto7 !== "undefined") auto7 = savegame.auto7;
+	if (typeof savegame.sellAuto1 !== "undefined") sellAuto1 = savegame.sellAuto1;
+	if (typeof savegame.sellAuto2 !== "undefined") sellAuto2 = savegame.sellAuto2;
+	if (typeof savegame.sellAuto3 !== "undefined") sellAuto3 = savegame.sellAuto3;
+	if (typeof savegame.sellAuto4 !== "undefined") sellAuto4 = savegame.sellAuto4;
+	if (typeof savegame.sellAuto5 !== "undefined") sellAuto5 = savegame.sellAuto5;
+	if (typeof savegame.manaAuto1 !== "undefined") manaAuto1 = savegame.manaAuto1;
+
+
 }
 
 window.setInterval(function(){

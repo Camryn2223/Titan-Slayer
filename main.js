@@ -347,7 +347,7 @@ function saveGame() {
 		sellAuto5: sellAuto5,
 		sellAuto5Cost: sellAuto5Cost,
 		manaAuto1: manaAuto1,
-		manaAuto1Cost: manaAuto1Cost
+		manaAuto1Cost: manaAuto1Cost;
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 	document.getElementById("saveGame").innerHTML = "Game Saved!";
@@ -372,7 +372,7 @@ function loadGame() {
 	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
 	if (typeof savegame.nextCostAuto1 !== "undefined") nextCostAuto1 = savegame.nextCostAuto1;
 	if (typeof savegame.numberOfAutomatic1 !== "undefined") numberOfAutomatic1 = savegame.numberOfAutomatic1;
-	
+
 	if (typeof savegame.auto2 !== "undefined") auto2 = savegame.auto2;
 	if (typeof savegame.auto2Cost !== "undefined") auto2Cost = savegame.auto2Cost;
 	if (typeof savegame.auto3 !== "undefined") auto3 = savegame.auto3;

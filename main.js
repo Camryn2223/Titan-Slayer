@@ -332,10 +332,6 @@ function loadGame() {
 	if (typeof savegame.auto1 !== "undefined") auto1 = savegame.auto1;
 }
 
-function deleteGame() {
-	localStorage.removeItem("save");
-}
-
 window.setInterval(function(){
 	sellPart(cashPerSecond);
 	gainParts(partsPerSecond);

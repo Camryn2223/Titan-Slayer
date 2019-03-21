@@ -478,35 +478,22 @@ window.setInterval(function(){
 
 	partsPerSecond = (auto1 * 1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
-	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCostAuto1;
 	document.getElementById("numberOfAutomatic2").innerHTML = "Swordsmen: " + auto2;
-	document.getElementById("auto2Cost").innerHTML = "Cost: $ " + nextCostAuto2;
 	document.getElementById("numberOfAutomatic3").innerHTML = "Knights: " + auto3;
-	document.getElementById("auto3Cost").innerHTML = "Cost: $ " + nextCostAuto3;
 	document.getElementById("numberOfAutomatic4").innerHTML = "Generals: " + auto4;
-	document.getElementById("auto4Cost").innerHTML = "Cost: $ " + nextCostAuto4;
 	document.getElementById("numberOfAutomatic5").innerHTML = "Commanders: " + auto5;
-	document.getElementById("auto5Cost").innerHTML = "Cost: $ " + nextCostAuto5;
 	document.getElementById("numberOfAutomatic6").innerHTML = "Dark Knights: " + auto6;
-	document.getElementById("auto6Cost").innerHTML = "Cost: $ " + nextCostAuto6;
 	document.getElementById("numberOfAutomatic7").innerHTML = "Titan Slayers: " + auto7;
-	document.getElementById("auto7Cost").innerHTML = "Cost: $ " + nextCostAuto7;
 
 	cashPerSecond = (sellAuto1 * 1) + (sellAuto2 * 5) + (sellAuto3 * 10) + (sellAuto4 * 15) + (sellAuto5 * 20);
 	document.getElementById("numberOfSellAutomatic1").innerHTML = "Blacksmiths: " + sellAuto1;
-	document.getElementById("sellAuto1").innerHTML = "Cost: " + nextCostSellAuto1 + " Parts";
 	document.getElementById("numberOfSellAutomatic2").innerHTML = "Alchemists: " + sellAuto2;
-	document.getElementById("sellAuto2").innerHTML = "Cost: " + nextCostSellAuto2 + " Parts";
 	document.getElementById("numberOfSellAutomatic3").innerHTML = "Thieves: " + sellAuto3;
-	document.getElementById("sellAuto3").innerHTML = "Cost: " + nextCostSellAuto3 + " Parts";
 	document.getElementById("numberOfSellAutomatic4").innerHTML = "Wizards: " + sellAuto4;
-	document.getElementById("sellAuto4").innerHTML = "Cost: " + nextCostSellAuto4 + " Parts";
 	document.getElementById("numberOfSellAutomatic5").innerHTML = "Summoners: " + sellAuto5;
-	document.getElementById("sellAuto5").innerHTML = "Cost: " + nextCostSellAuto5 + " Parts";
 
 	manaPerSecond = (manaAuto1 * 1);
 	document.getElementById("numberOfManaProducer1").innerHTML = "Transmutators: " + manaAuto1;
-	document.getElementById("manaAuto1").innerHTML = "Cost: " + nextManaAuto1Cost + " Mana";
 }, 1000);
 
 window.setInterval(function(){

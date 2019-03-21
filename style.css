@@ -17,7 +17,6 @@ outline: none;
 	border: none;
 	width: 150px;
 	height: 35px;
-	margin-top: -25px;
 	position: relative;
 	background-color: #5D6063;
 }
@@ -31,7 +30,6 @@ outline: none;
 	width: 150px;
 	height: 35px;
 	margin-right: 50px;
-	margin-top: -25px;
 	position: relative;
 	background-color: #5D6063;
 }

@@ -315,7 +315,6 @@ function saveGame() {
 		parts: savedParts,
 		cash: savedCash,
 		mana: savedMana,
-		partsLevel: savedPartsLevel,
 	}
 	localStorage.setItem("save",JSON.stringify(saveGame));
 }
@@ -329,7 +328,6 @@ function loadGame() {
 	if (typeof savegame.savedParts !== "undefined") parts = savegame.savedParts;
 	if (typeof savegame.savedCash !== "undefined") cash = savegame.savedCash;
 	if (typeof savegame.savedMana !== "undefined") mana = savegame.savedMana;
-	if (typeof savegame.savedPartsLevel !== "undefined") partsLevel = savegame.savedPartsLevel;
 }
 
 window.setInterval(function(){

@@ -1,4 +1,4 @@
-var save = {
+var saveGame = {
 	parts: parts,
 	cash: cash,
 	mana: mana,
@@ -322,12 +322,12 @@ function cps() {
 }
 
 function saveGame() {
-	localStorage.setItem("save",JSON.stringify(save));
+	localStorage.setItem("saveGame",JSON.stringify(saveGame));
 	console.log("Saved!");
 }
 
 function load() {
-	var savegame = JSON.parse(localStorage.getItem("save"));
+	var savegame = JSON.parse(localStorage.getItem("saveGame"));
 	if (typeof savegame.parts !== "undefined") parts = savegame.parts;
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;

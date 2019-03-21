@@ -9,19 +9,12 @@ var cashPerSecond = 0;
 var manaPerSecond = 0;
 
 var auto1 = 0;
-var auto1Cost = Math.floor(10 * Math.pow(1.4, auto1));
 var auto2 = 0;
-var auto2Cost = Math.floor(50 * Math.pow(1.3, auto2));
 var auto3 = 0;
-var auto3Cost = Math.floor(100 * Math.pow(1.2, auto3));
 var auto4 = 0;
-var auto4Cost = Math.floor(150 * Math.pow(1.1, auto4));
 var auto5 = 0;
-var auto5Cost = Math.floor(200 * Math.pow(1.1, auto5));
 var auto6 = 0;
-var auto6Cost = Math.floor(200 * Math.pow(1.1, auto6));
 var auto7 = 0;
-var auto7Cost = Math.floor(100 * Math.pow(1.3, auto7));
 
 var sellAuto1 = 0;
 var sellAuto2 = 0;
@@ -73,78 +66,85 @@ function sellPart(number) {
 /* Auto Producers*/
 
 function buyCommoner() {
+	auto1Cost = Math.floor(10 * Math.pow(1.4, auto1));
 	if(cash >= auto1Cost) {
 		auto1 = auto1 + 1;
 		cash = cash - auto1Cost;
 	}
-	var nextCostAuto1 = Math.floor(10 * Math.pow(1.4, auto1));
+	nextCostAuto1 = Math.floor(10 * Math.pow(1.4, auto1));
 	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCostAuto1;
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
 
 function buySwordsman() {
+	auto2Cost = Math.floor(50 * Math.pow(1.3, auto2));
 	if(cash >= auto2Cost) {
 		auto2 = auto2 + 1;
 		cash = cash - auto2Cost;
 	}
-	var nextCost = Math.floor(50 * Math.pow(1.3, auto2));
-	document.getElementById("auto2Cost").innerHTML = "Cost: $ " + nextCost;
+	nextCostAuto2 = Math.floor(50 * Math.pow(1.3, auto2));
+	document.getElementById("auto2Cost").innerHTML = "Cost: $ " + nextCostAuto2;
 	document.getElementById("numberOfAutomatic2").innerHTML = "Swordsmen: " + auto2;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
 
 function buyKnight() {
+	auto3Cost = Math.floor(100 * Math.pow(1.2, auto3));
 	if(cash >= auto3Cost) {
 		auto3 = auto3 + 1;
 		cash = cash - auto3Cost;
 	}
-	var nextCost = Math.floor(100 * Math.pow(1.2, auto3));
-	document.getElementById("auto3Cost").innerHTML = "Cost: $ " + nextCost;
+	nextCostAuto3 = Math.floor(100 * Math.pow(1.2, auto3));
+	document.getElementById("auto3Cost").innerHTML = "Cost: $ " + nextCostAuto3;
 	document.getElementById("numberOfAutomatic3").innerHTML = "Knights: " + auto3;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
 
 function buyGeneral() {
+	auto4Cost = Math.floor(150 * Math.pow(1.1, auto4));
 	if(cash >= auto4Cost) {
 		auto4 = auto4 + 1;
 		cash = cash - auto4Cost;
 	}
-	var nextCost = Math.floor(150 * Math.pow(1.1, auto4));
-	document.getElementById("auto4Cost").innerHTML = "Cost: $ " + nextCost;
+	nextCostAuto4 = Math.floor(150 * Math.pow(1.1, auto4));
+	document.getElementById("auto4Cost").innerHTML = "Cost: $ " + nextCostAuto4;
 	document.getElementById("numberOfAutomatic4").innerHTML = "Generals: " + auto4;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
 
 function buyCommander() {
+	auto5Cost = Math.floor(200 * Math.pow(1.1, auto5));
 	if(cash >= auto5Cost) {
 		auto5 = auto5 + 1;
 		cash = cash - auto5Cost;
 	}
-	var nextCost = Math.floor(200 * Math.pow(1.1, auto5));
-	document.getElementById("auto5Cost").innerHTML = "Cost: $ " + nextCost;
+	nextCostAuto5 = Math.floor(200 * Math.pow(1.1, auto5));
+	document.getElementById("auto5Cost").innerHTML = "Cost: $ " + nextCostAuto5;
 	document.getElementById("numberOfAutomatic5").innerHTML = "Commanders: " + auto5;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
 
 function buyDarkKnight() {
+	auto6Cost = Math.floor(200 * Math.pow(1.1, auto6));
 	if(cash >= auto6Cost) {
 		auto6 = auto6 + 1;
 		cash = cash - auto6Cost;
 	}
-	var nextCost = Math.floor(200 * Math.pow(1.1, auto6));
-	document.getElementById("auto6Cost").innerHTML = "Cost: $ " + nextCost;
+	nextCostAuto6 = Math.floor(200 * Math.pow(1.1, auto6));
+	document.getElementById("auto6Cost").innerHTML = "Cost: $ " + nextCostAuto6;
 	document.getElementById("numberOfAutomatic6").innerHTML = "Dark Knights: " + auto6;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
 
 function buyTitanSlayer() {
+	auto7Cost = Math.floor(100 * Math.pow(1.3, auto7));
 	if(mana >= auto7Cost) {
 		auto7 = auto7 + 1;
 		mana = mana - auto7Cost;
 	}
-	var nextCost = Math.floor(100 * Math.pow(1.3, auto7));
-	document.getElementById("auto7Cost").innerHTML = "Cost: " + nextCost + " Mana";
+	nextCostAuto7 = Math.floor(100 * Math.pow(1.3, auto7));
+	document.getElementById("auto7Cost").innerHTML = "Cost: " + nextCostAuto7 + " Mana";
 	document.getElementById("numberOfAutomatic7").innerHTML = "Titan Slayers: " + auto7;
 	document.getElementById("mana").innerHTML = "Mana: " + mana;
 }
@@ -157,8 +157,8 @@ function buyBlacksmith() {
 		sellAuto1 = sellAuto1 + 1;
 		parts = parts - sellAuto1Cost;
 	}
-	var nextCost = Math.floor(250 * Math.pow(1.1, sellAuto1));
-	document.getElementById("sellAuto1Cost").innerHTML = "Cost: " + nextCost + " Parts";
+	nextCostSellAuto1 = Math.floor(250 * Math.pow(1.1, sellAuto1));
+	document.getElementById("sellAuto1Cost").innerHTML = "Cost: " + nextCostSellAuto1 + " Parts";
 	document.getElementById("numberOfSellAutomatic1").innerHTML = "Blacksmiths: " + sellAuto1;
 	document.getElementById("parts").innerHTML = "Parts: " + parts;
 }
@@ -169,8 +169,8 @@ function buyAlchemist() {
 		sellAuto2 = sellAuto2 + 1;
 		parts = parts - sellAuto2Cost;
 	}
-	var nextCost = Math.floor(500 * Math.pow(1.1, sellAuto2));
-	document.getElementById("sellAuto2Cost").innerHTML = "Cost: " + nextCost + " Parts";
+	nextCostSellAuto2 = Math.floor(500 * Math.pow(1.1, sellAuto2));
+	document.getElementById("sellAuto2Cost").innerHTML = "Cost: " + nextCostSellAuto2 + " Parts";
 	document.getElementById("numberOfSellAutomatic2").innerHTML = "Alchemists: " + sellAuto2;
 	document.getElementById("parts").innerHTML = "Parts: " + parts;
 }
@@ -181,8 +181,8 @@ function buyThief() {
 		sellAuto3 = sellAuto3 + 1;
 		parts = parts - sellAuto3Cost;
 	}
-	var nextCost = Math.floor(1000 * Math.pow(1.1, sellAuto3));
-	document.getElementById("sellAuto3Cost").innerHTML = "Cost: " + nextCost + " Parts";
+	nextCostSellAuto3 = Math.floor(1000 * Math.pow(1.1, sellAuto3));
+	document.getElementById("sellAuto3Cost").innerHTML = "Cost: " + nextCostSellAuto3 + " Parts";
 	document.getElementById("numberOfSellAutomatic3").innerHTML = "Thieves: " + sellAuto3;
 	document.getElementById("parts").innerHTML = "Parts: " + parts;
 }
@@ -193,8 +193,8 @@ function buyWizard() {
 		sellAuto4 = sellAuto4 + 1;
 		parts = parts - sellAuto4Cost;
 	}
-	var nextCost = Math.floor(2000 * Math.pow(1.1, sellAuto4));
-	document.getElementById("sellAuto4Cost").innerHTML = "Cost: " + nextCost + " Parts";
+	nextCostSellAuto4 = Math.floor(2000 * Math.pow(1.1, sellAuto4));
+	document.getElementById("sellAuto4Cost").innerHTML = "Cost: " + nextCostSellAuto4 + " Parts";
 	document.getElementById("numberOfSellAutomatic4").innerHTML = "Wizards: " + sellAuto4;
 	document.getElementById("parts").innerHTML = "Parts: " + parts;
 }
@@ -205,8 +205,8 @@ function buySummoner() {
 		sellAuto5 = sellAuto5 + 1;
 		parts = parts - sellAuto5Cost;
 	}
-	var nextCost = Math.floor(2500 * Math.pow(1.1, sellAuto5));
-	document.getElementById("sellAuto5Cost").innerHTML = "Cost: " + nextCost + " Parts";
+	nextCostSellAuto5 = Math.floor(2500 * Math.pow(1.1, sellAuto5));
+	document.getElementById("sellAuto5Cost").innerHTML = "Cost: " + nextCostSellAuto5 + " Parts";
 	document.getElementById("numberOfSellAutomatic5").innerHTML = "Summoners: " + sellAuto5;
 	document.getElementById("parts").innerHTML = "Parts: " + parts;
 }
@@ -219,8 +219,8 @@ function buyTransmutator() {
 		manaAuto1 = manaAuto1 + 1;
 		parts = parts - manaAuto1Cost;
 	}
-	var nextCost = Math.floor(2000 * Math.pow(1.5, manaAuto1));
-	document.getElementById("manaProducer1Cost").innerHTML = "Cost: " + nextCost + " Parts";
+	nextManaAuto1Cost = Math.floor(2000 * Math.pow(1.5, manaAuto1));
+	document.getElementById("manaProducer1Cost").innerHTML = "Cost: " + nextManaAuto1Cost + " Parts";
 	document.getElementById("numberOfManaProducer1").innerHTML = "Transmutators: " + manaAuto1;
 	document.getElementById("mana").innerHTML = "Mana: " + mana;
 }
@@ -316,14 +316,76 @@ function saveGame() {
 		cash: cash,
 		mana: mana,
 		partsLevel: partsLevel,
+		costOfUpgrade: costOfUpgrade,
+
 		partsPerSecond: partsPerSecond,
 		cashPerSecond: cashPerSecond,
 		manaPerSecond: manaPerSecond,
-		costOfUpgrade: costOfUpgrade,
+
 		auto1: auto1,
 		auto1Cost: auto1Cost,
 		nextCostAuto1: nextCostAuto1,
-		numberOfAutomatic1: numberOfAutomatic1
+		numberOfAutomatic1: numberOfAutomatic1,
+
+		auto2: auto2,
+		auto2Cost: auto2Cost,
+		nextCostAuto2: nextCostAuto2,
+		numberOfAutomatic2: numberOfAutomatic2,
+
+		auto3: auto3,
+		auto3Cost: auto3Cost,
+		nextCostAuto3: nextCostAuto3,
+		numberOfAutomatic3: numberOfAutomatic3,
+
+		auto4: auto4,
+		auto4Cost: auto4Cost,
+		nextCostAuto4: nextCostAuto4,
+		numberOfAutomatic4: numberOfAutomatic4,
+
+		auto5: auto5,
+		auto5Cost: auto5Cost,
+		nextCostAuto5: nextCostAuto5,
+		numberOfAutomatic5: numberOfAutomatic5,
+
+		auto6: auto6,
+		auto6Cost: auto6Cost,
+		nextCostAuto6: nextCostAuto6,
+		numberOfAutomatic6: numberOfAutomatic6,
+
+		auto7: auto7,
+		auto7Cost: auto7Cost,
+		nextCostAuto7: nextCostAuto7,
+		numberOfAutomatic7: numberOfAutomatic7,
+
+		sellAuto1: sellAuto1,
+		sellAuto1Cost: sellAuto1Cost,
+		nextCostSellAuto1: nextCostSellAuto1,
+		numberOfSellAutomatic1: numberOfSellAutomatic1,
+
+		sellAuto2: sellAuto2,
+		sellAuto2Cost: sellAuto2Cost,
+		nextCostSellAuto2: nextCostSellAuto2,
+		numberOfSellAutomatic2: numberOfSellAutomatic2,
+
+		sellAuto3: sellAuto3,
+		sellAuto3Cost: sellAuto3Cost,
+		nextCostSellAuto3: nextCostSellAuto3,
+		numberOfSellAutomatic3: numberOfSellAutomatic3,
+
+		sellAuto4: sellAuto4,
+		sellAuto4Cost: sellAuto4Cost,
+		nextCostSellAuto4: nextCostSellAuto4,
+		numberOfSellAutomatic4: numberOfSellAutomatic4,
+
+		sellAuto5: sellAuto5,
+		sellAuto5Cost: sellAuto5Cost,
+		nextCostSellAuto5: nextCostSellAuto5,
+		numberOfSellAutomatic5: numberOfSellAutomatic5,
+
+		manaAuto1: manaAuto1,
+		manaAuto1Cost: manaAuto1Cost,
+		nextManaAuto1Cost: nextManaAuto1Cost,
+		numberOfManaProducer1: numberOfManaProducer1
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -338,6 +400,7 @@ function loadGame() {
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
 	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
+
 	if (typeof savegame.partsPerSecond !== "undefined") partsPerSecond = savegame.partsPerSecond;
 	if (typeof savegame.cashPerSecond !== "undefined") cashPerSecond = savegame.cashPerSecond;
 	if (typeof savegame.manaPerSecond !== "undefined") manaPerSecond = savegame.manaPerSecond;
@@ -346,6 +409,66 @@ function loadGame() {
 	if (typeof savegame.auto1Cost !== "undefined") auto1Cost = savegame.auto1Cost;
 	if (typeof savegame.nextCostAuto1 !== "undefined") nextCostAuto1 = savegame.nextCostAuto1;
 	if (typeof savegame.numberOfAutomatic1 !== "undefined") numberOfAutomatic1 = savegame.numberOfAutomatic1;
+
+	if (typeof savegame.auto2 !== "undefined") auto2 = savegame.auto2;
+	if (typeof savegame.auto2Cost !== "undefined") auto2Cost = savegame.auto2Cost;
+	if (typeof savegame.nextCostAuto2 !== "undefined") nextCostAuto2 = savegame.nextCostAuto2;
+	if (typeof savegame.numberOfAutomatic2 !== "undefined") numberOfAutomatic2 = savegame.numberOfAutomatic2;
+
+	if (typeof savegame.auto3 !== "undefined") auto3 = savegame.auto3;
+	if (typeof savegame.auto3Cost !== "undefined") auto3Cost = savegame.auto3Cost;
+	if (typeof savegame.nextCostAuto3 !== "undefined") nextCostAuto3 = savegame.nextCostAuto3;
+	if (typeof savegame.numberOfAutomatic3 !== "undefined") numberOfAutomatic3 = savegame.numberOfAutomatic3;
+
+	if (typeof savegame.auto4 !== "undefined") auto4 = savegame.auto4;
+	if (typeof savegame.auto4Cost !== "undefined") auto4Cost = savegame.auto4Cost;
+	if (typeof savegame.nextCostAuto4 !== "undefined") nextCostAuto4 = savegame.nextCostAuto4;
+	if (typeof savegame.numberOfAutomatic4 !== "undefined") numberOfAutomatic4 = savegame.numberOfAutomatic4;
+
+	if (typeof savegame.auto5 !== "undefined") auto5 = savegame.auto5;
+	if (typeof savegame.auto5Cost !== "undefined") auto5Cost = savegame.auto5Cost;
+	if (typeof savegame.nextCostAuto5 !== "undefined") nextCostAuto5 = savegame.nextCostAuto5;
+	if (typeof savegame.numberOfAutomatic5 !== "undefined") numberOfAutomatic5 = savegame.numberOfAutomatic5;
+
+	if (typeof savegame.auto6 !== "undefined") auto6 = savegame.auto6;
+	if (typeof savegame.auto6Cost !== "undefined") auto6Cost = savegame.auto6Cost;
+	if (typeof savegame.nextCostAuto6 !== "undefined") nextCostAuto6 = savegame.nextCostAuto6;
+	if (typeof savegame.numberOfAutomatic6 !== "undefined") numberOfAutomatic6 = savegame.numberOfAutomatic6;
+
+	if (typeof savegame.auto7 !== "undefined") auto7 = savegame.auto7;
+	if (typeof savegame.auto7Cost !== "undefined") auto7Cost = savegame.auto7Cost;
+	if (typeof savegame.nextCostAuto7 !== "undefined") nextCostAuto7 = savegame.nextCostAuto7;
+	if (typeof savegame.numberOfAutomatic7 !== "undefined") numberOfAutomatic7 = savegame.numberOfAutomatic7;
+
+	if (typeof savegame.sellAuto1 !== "undefined") sellAuto1 = savegame.sellAuto1;
+	if (typeof savegame.sellAuto1Cost !== "undefined") sellAuto1Cost = savegame.sellAuto1Cost;
+	if (typeof savegame.nextCostSellAuto1 !== "undefined") nextCostSellAuto1 = savegame.nextCostSellAuto1;
+	if (typeof savegame.numberOfSellAutomatic1 !== "undefined") numberOfSellAutomatic1 = savegame.numberOfSellAutomatic1;
+
+	if (typeof savegame.sellAuto2 !== "undefined") sellAuto2 = savegame.sellAuto2;
+	if (typeof savegame.sellAuto2Cost !== "undefined") sellAuto2Cost = savegame.sellAuto2Cost;
+	if (typeof savegame.nextCostSellAuto2 !== "undefined") nextCostSellAuto2 = savegame.nextCostSellAuto2;
+	if (typeof savegame.numberOfSellAutomatic2 !== "undefined") numberOfSellAutomatic2 = savegame.numberOfSellAutomatic2;
+
+	if (typeof savegame.sellAuto3 !== "undefined") sellAuto3 = savegame.sellAuto3;
+	if (typeof savegame.sellAuto3Cost !== "undefined") sellAuto3Cost = savegame.sellAuto3Cost;
+	if (typeof savegame.nextCostSellAuto3 !== "undefined") nextCostSellAuto3 = savegame.nextCostSellAuto3;
+	if (typeof savegame.numberOfSellAutomatic3 !== "undefined") numberOfSellAutomatic3 = savegame.numberOfSellAutomatic3;
+
+	if (typeof savegame.sellAuto4 !== "undefined") sellAuto4 = savegame.sellAuto4;
+	if (typeof savegame.sellAuto4Cost !== "undefined") sellAuto4Cost = savegame.sellAuto4Cost;
+	if (typeof savegame.nextCostSellAuto4 !== "undefined") nextCostSellAuto4 = savegame.nextCostSellAuto4;
+	if (typeof savegame.numberOfSellAutomatic4 !== "undefined") numberOfSellAutomatic4 = savegame.numberOfSellAutomatic4;
+
+	if (typeof savegame.sellAuto5 !== "undefined") sellAuto5 = savegame.sellAuto5;
+	if (typeof savegame.sellAuto5Cost !== "undefined") sellAuto5Cost = savegame.sellAuto5Cost;
+	if (typeof savegame.nextCostSellAuto5 !== "undefined") nextCostSellAuto5 = savegame.nextCostSellAuto5;
+	if (typeof savegame.numberOfSellAutomatic5 !== "undefined") numberOfSellAutomatic5 = savegame.numberOfSellAutomatic5;
+
+	if (typeof savegame.manaAuto1 !== "undefined") manaAuto1 = savegame.manaAuto1;
+	if (typeof savegame.manaAuto1Cost !== "undefined") manaAuto1Cost = savegame.manaAuto1Cost;
+	if (typeof savegame.nextManaAuto1Cost !== "undefined") nextManaAuto1Cost = savegame.nextManaAuto1Cost;
+	if (typeof savegame.numberOfManaProducer1 !== "undefined") numberOfManaProducer1 = savegame.numberOfManaProducer1;
 }
 
 window.setInterval(function(){
@@ -357,22 +480,33 @@ window.setInterval(function(){
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
 	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCostAuto1;
 	document.getElementById("numberOfAutomatic2").innerHTML = "Swordsmen: " + auto2;
-	document.getElementById("auto2Cost").innerHTML = "Cost: $ " + nextCost;
+	document.getElementById("auto2Cost").innerHTML = "Cost: $ " + nextCostAuto2;
 	document.getElementById("numberOfAutomatic3").innerHTML = "Knights: " + auto3;
+	document.getElementById("auto3Cost").innerHTML = "Cost: $ " + nextCostAuto3;
 	document.getElementById("numberOfAutomatic4").innerHTML = "Generals: " + auto4;
+	document.getElementById("auto4Cost").innerHTML = "Cost: $ " + nextCostAuto4;
 	document.getElementById("numberOfAutomatic5").innerHTML = "Commanders: " + auto5;
+	document.getElementById("auto5Cost").innerHTML = "Cost: $ " + nextCostAuto5;
 	document.getElementById("numberOfAutomatic6").innerHTML = "Dark Knights: " + auto6;
+	document.getElementById("auto6Cost").innerHTML = "Cost: $ " + nextCostAuto6;
 	document.getElementById("numberOfAutomatic7").innerHTML = "Titan Slayers: " + auto7;
+	document.getElementById("auto7Cost").innerHTML = "Cost: $ " + nextCostAuto7;
 
 	cashPerSecond = (sellAuto1 * 1) + (sellAuto2 * 5) + (sellAuto3 * 10) + (sellAuto4 * 15) + (sellAuto5 * 20);
 	document.getElementById("numberOfSellAutomatic1").innerHTML = "Blacksmiths: " + sellAuto1;
+	document.getElementById("sellAuto1").innerHTML = "Cost: " + nextCostSellAuto1 + " Parts";
 	document.getElementById("numberOfSellAutomatic2").innerHTML = "Alchemists: " + sellAuto2;
+	document.getElementById("sellAuto2").innerHTML = "Cost: " + nextCostSellAuto2 + " Parts";
 	document.getElementById("numberOfSellAutomatic3").innerHTML = "Thieves: " + sellAuto3;
+	document.getElementById("sellAuto3").innerHTML = "Cost: " + nextCostSellAuto3 + " Parts";
 	document.getElementById("numberOfSellAutomatic4").innerHTML = "Wizards: " + sellAuto4;
+	document.getElementById("sellAuto4").innerHTML = "Cost: " + nextCostSellAuto4 + " Parts";
 	document.getElementById("numberOfSellAutomatic5").innerHTML = "Summoners: " + sellAuto5;
+	document.getElementById("sellAuto5").innerHTML = "Cost: " + nextCostSellAuto5 + " Parts";
 
 	manaPerSecond = (manaAuto1 * 1);
 	document.getElementById("numberOfManaProducer1").innerHTML = "Transmutators: " + manaAuto1;
+	document.getElementById("manaAuto1").innerHTML = "Cost: " + nextManaAuto1Cost + " Mana";
 }, 1000);
 
 window.setInterval(function(){

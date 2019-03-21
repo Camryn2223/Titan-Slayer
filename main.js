@@ -312,9 +312,11 @@ function cps() {
 
 function saveGame() {
 	var save = {
-		parts: savedParts,
-		cash: savedCash,
-		mana: savedMana,
+		parts: parts,
+		cash: cash,
+		mana: mana,
+		partsLevel: partsLevel,
+		costOfUpgrade: costOfUpgrade
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }
@@ -325,9 +327,11 @@ function saveDelete() {
 
 function loadGame() {
 	var savegame = JSON.parse(localStorage.getItem("save"));
-	if (typeof savegame.savedParts !== "undefined") parts = savegame.savedParts;
-	if (typeof savegame.savedCash !== "undefined") cash = savegame.savedCash;
-	if (typeof savegame.savedMana !== "undefined") mana = savegame.savedMana;
+	if (typeof savegame.parts !== "undefined") parts = savegame.parts;
+	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
+	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
+	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
+	if (typeof savegame.costOfUpgrade !== "undefined") costOfUpgrade = savegame.costOfUpgrade;
 }
 
 window.setInterval(function(){

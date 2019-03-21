@@ -10,7 +10,6 @@ var save = {
 	auto2: auto2
 }
 
-
 var partsLevel = 0;
 
 var parts = 0;
@@ -323,11 +322,12 @@ function cps() {
 }
 
 function saveGame() {
-	var savegame = JSON.parse(localStorage.getItem("save"));
+	localStorage.setItem("save",JSON.stringify(save));
 	console.log("Saved!");
 }
 
 function load() {
+	var savegame = JSON.parse(localStorage.getItem("save"));
 	if (typeof savegame.parts !== "undefined") parts = savegame.parts;
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;

@@ -71,8 +71,8 @@ function buyCommoner() {
 		auto1 = auto1 + 1;
 		cash = cash - auto1Cost;
 	}
-	var nextCost = Math.floor(10 * Math.pow(1.4, auto1));
-	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCost;
+	var nextCostAuto1 = Math.floor(10 * Math.pow(1.4, auto1));
+	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCostAuto1;
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
@@ -355,7 +355,7 @@ window.setInterval(function(){
 
 	partsPerSecond = (auto1 * 1) + (auto2 * 3) + (auto3 * 5) + (auto4 * 7) + (auto5 * 9) + (auto6 * 11) + (auto7 * 15);
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
-	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCost;
+	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCostAuto1;
 	document.getElementById("numberOfAutomatic2").innerHTML = "Swordsmen: " + auto2;
 	document.getElementById("auto2Cost").innerHTML = "Cost: $ " + nextCost;
 	document.getElementById("numberOfAutomatic3").innerHTML = "Knights: " + auto3;

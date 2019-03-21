@@ -316,7 +316,6 @@ function saveGame() {
 		cash: cash,
 		mana: mana,
 		partsLevel: partsLevel,
-		nextUpgradeCost: nextUpgradeCost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 }

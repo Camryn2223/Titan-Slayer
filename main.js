@@ -331,7 +331,6 @@ function loadGame() {
 	if (typeof savegame.cash !== "undefined") cash = savegame.cash;
 	if (typeof savegame.mana !== "undefined") mana = savegame.mana;
 	if (typeof savegame.partsLevel !== "undefined") partsLevel = savegame.partsLevel;
-	if (typeof savegame.costOfUpgrade !== "undefined") costOfUpgrade = savegame.costOfUpgrade;
 }
 
 window.setInterval(function(){

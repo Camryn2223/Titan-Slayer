@@ -353,7 +353,6 @@ function saveGame() {
 	localStorage.setItem("save",JSON.stringify(save));
 	document.getElementById("gameSaved").style.visibility = "visible";
 	document.getElementById("gameSaved").innerHTML = "Game Saved!";
-
 }
 
 function saveDelete() {

@@ -347,7 +347,7 @@ function saveGame() {
 		sellAuto5: sellAuto5,
 		sellAuto5Cost: sellAuto5Cost,
 		manaAuto1: manaAuto1,
-		manaAuto1Cost: manaAuto1Cost;
+		manaAuto1Cost: manaAuto1Cost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
 	document.getElementById("saveGame").innerHTML = "Game Saved!";

@@ -71,8 +71,8 @@ function buyCommoner() {
 		auto1 = auto1 + 1;
 		cash = cash - auto1Cost;
 	}
-	var nextCost = Math.floor(10 * Math.pow(1.4, auto1));
-	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCost;
+	var nextCostAuto1 = Math.floor(10 * Math.pow(1.4, auto1));
+	document.getElementById("auto1Cost").innerHTML = "Cost: $ " + nextCostAuto1;
 	document.getElementById("numberOfAutomatic1").innerHTML = "Commoners: " + auto1;
 	document.getElementById("cash").innerHTML = "Cash: $ " + cash;
 }
@@ -323,6 +323,8 @@ function saveGame() {
 
 		auto1: auto1,
 		auto1Cost: auto1Cost,
+		nextCostAuto1: nextCostAuto1,
+		numberOfAutomatic1: numberOfAutomatic1,
 		auto2: auto2,
 		auto2Cost: auto2Cost,
 		auto3: auto3,

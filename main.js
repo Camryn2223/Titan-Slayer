@@ -351,6 +351,9 @@ function saveGame() {
 		manaAuto1Cost: manaAuto1Cost
 	}
 	localStorage.setItem("save",JSON.stringify(save));
+	document.getElementById("gameSaved").style.visibility = "visible";
+	document.getElementById("gameSaved").innerHTML = "Game Saved!";
+
 }
 
 function saveDelete() {

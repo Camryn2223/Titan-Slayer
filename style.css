@@ -24,6 +24,11 @@ outline: none;
 	background-color: #525557;
 }
 
+.gameSaved {
+	float: right;
+	visibility: hidden;
+}
+
 .saveDelete {
 	float: right;
 	border: none;
